@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Sticky Notes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <button class="draw"><img src="./images/color.png"></button>
+  <button class="night" role="button"><img src="./images/day-and-night.png"></button>
+
+  <button class="button-32" role="button"> <i class="fas fa-plus"></i>&nbsp;Add Note</button>
+  <div class="hide hide2" style="width: 350px;">
+    <div class="toolbox">
+      <button id="decrease"><i class="fas fa-search-minus"></i></button>
+      <span id="size">5</span>
+      <button id="increase"><i class="fas fa-search-plus"></i></button>
+      <label for="color">
+        <i class="fas fa-palette"></i>
+        <input type="color" id="color" style="display: none">
+      </label>
+      <button id="clear"><i class="fas fa-eraser"></i></button>
+    </div>
+    <canvas id="canvas" width="350" height="350" style="background-color: white"></canvas>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

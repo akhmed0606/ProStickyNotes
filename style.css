@@ -1,0 +1,209 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    background-image: url(./images/pexels-andreea-ch-1166644.jpg);
+    display:flex;
+    flex-wrap:wrap;
+    margin:0;
+    padding-top:3rem;
+}
+.hidden {
+    display:none;
+}
+
+div.note {
+  width:350px;
+  height:350px;
+  background-color:  #fafafa; 
+  transition: background 0.2s linear;
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+  margin:30px 20px;
+}
+.note .tools {
+    background-color:#D96E0C;
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px;
+}
+.tools button {
+    background-color: transparent;
+    border:none;
+    color: white;
+    cursor:pointer;
+    font-size: 23px;
+    margin-left: 0.5rem;
+}
+.note textarea {
+    width: 100%;
+    height: 350px;
+    outline: none;
+    font-family: inherit;
+    font-size: 20px;
+    border:none;
+    resize: none;
+}
+.main {
+    padding: 20px;
+
+}
+
+.dark {
+  background-image: none;
+  background-color: #292C35;
+}
+
+.button-32 {
+    position:fixed;
+    z-index: 10;
+    top:15px;
+    right:15px;
+    font-size: 20px;
+    font-family: 'Bebas Neue';
+    background-color: #D96E0C;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 200ms;
+    box-sizing: border-box;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-32:not(:disabled):hover,
+  .button-32:not(:disabled):focus {
+    outline: 0;
+    background:#D96E0C;
+    box-shadow: 0 0 0 2px rgba(219, 109, 41, 0.144), 0 3px 8px 0  rgba(219, 109, 41, 0.144);
+  }
+  
+  .button-32:disabled {
+    filter: saturate(0.2) opacity(0.5);
+    cursor: not-allowed;
+  }
+
+  .night {
+    position:fixed;
+    z-index: 10;
+    top:15px;
+    left:15px;
+    font-size: 0px;
+    background-color: #D96E0C;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    transition: 200ms;
+    box-sizing: border-box;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .night:not(:disabled):hover,
+  .night:not(:disabled):focus {
+    outline: 0;
+    background: #D96E0C;
+    box-shadow: 0 0 0 2px rgba(219, 109, 41, 0.144), 0 3px 8px 0  rgba(219, 109, 41, 0.144);
+  }
+  
+  .night:disabled {
+    filter: saturate(0.2) opacity(0.5);
+    cursor: not-allowed;
+  }
+
+  .draw {
+    position:fixed;
+    top:15px;
+    left:75px;
+    z-index: 10;
+    font-size: 0px;
+    background-color: #D96E0C;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    transition: 200ms;
+    box-sizing: border-box;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .draw:not(:disabled):hover,
+  .draw:not(:disabled):focus {
+    outline: 0;
+    background: #D96E0C;
+    box-shadow: 0 0 0 2px rgba(219, 109, 41, 0.144), 0 3px 8px 0  rgba(219, 109, 41, 0.144);
+  }
+  
+  .draw:disabled {
+    filter: saturate(0.2) opacity(0.5);
+    cursor: not-allowed;
+  }
+
+#canvas {
+  transition: background 0.2s linear;
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+}
+
+  .toolbox {
+    width:100%;
+    height: 45px;
+    background-color: #D96E0C;
+    padding:10px;
+  }
+
+
+.toolbox > * {
+    background-color:#D96E0C;
+    color: white;
+    border: none;
+    font-size: 23px;
+    cursor: pointer;
+    margin: 0 5px 0 5px;
+  }
+  #clear {
+    position: absolute;
+    right: 7px;
+  }
+  label[for=color]{
+    position: absolute;
+    right: 70px;
+  }
+
+.hide {
+  display: none;
+  margin:30px 20px;
+  position: relative;
+  
+}
+.draw-hide {
+  display: block;
+}
+#instructions {
+  color:white;
+  font-weight: 900;
+  font-size: 15px;
+  font-family: 'Bebas Neue'
+}
