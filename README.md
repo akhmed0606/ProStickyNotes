@@ -18,6 +18,6 @@ I checked out other sticky notes apps to see what I could do something special t
 
 ***Libraries***
 - Jquery
-- Marked syntax
+- Markdown syntax
 - Font Awesome
 - Favicon
