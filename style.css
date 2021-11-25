@@ -207,3 +207,9 @@ div.note {
   font-size: 15px;
   font-family: 'Bebas Neue'
 }
+
+@media screen and (max-width:480px) {
+    .draw {
+        display:none;
+    }
+}
