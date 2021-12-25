@@ -11,13 +11,13 @@ I checked out other sticky notes apps to see what I could do something special t
 
 
 ***My project files***
-- HTML
-- CSS
-- JavaScript
+- `HTML`
+- `CSS`
+- `JavaScript`
 
 
 ***Libraries***
-- Jquery
-- Markdown syntax
-- Font Awesome
-- Favicon
+- `Jquery`
+- `Markdown syntax`
+- `Font Awesome`
+- `Favicon`
