@@ -10,7 +10,7 @@ Since there are a lot of similar projects out there I've desided to add some fea
 I checked out other sticky notes apps to see what I could do something special to make this web app helpful and easy to use. And I noticed that most of them do not have voice recognition in the notes only outside of the sticky note.Other thing I noticed is they do not  use drawing feature for sticky notes. I found if I implement this idea it might be very useful to draw in the note your ideas which you can translate into a text note just by clicking add note button. It is also possible to have draw sticky note and texting one on the page at the same time. 
 
 
-***My project files***
+***Project files***
 - `HTML`
 - `CSS`
 - `JavaScript`
