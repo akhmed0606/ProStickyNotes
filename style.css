@@ -128,7 +128,10 @@ div.note {
     filter: saturate(0.2) opacity(0.5);
     cursor: not-allowed;
   }
-
+  .night img,
+  .draw img {
+    width: 23px;
+  }
   .draw {
     position:fixed;
     top:15px;
@@ -183,10 +186,12 @@ div.note {
     cursor: pointer;
     margin: 0 5px 0 5px;
   }
-  #clear {
+  #clear
+   {
     position: absolute;
     right: 7px;
   }
+
   label[for=color]{
     position: absolute;
     right: 70px;
@@ -201,15 +206,4 @@ div.note {
 .draw-hide {
   display: block;
 }
-#instructions {
-  color:white;
-  font-weight: 900;
-  font-size: 15px;
-  font-family: 'Bebas Neue'
-}
 
-@media screen and (max-width:480px) {
-    .draw {
-        display:none;
-    }
-}
