@@ -2,9 +2,7 @@ const addButton = document.querySelector(".button-32");
 
 const night = document.querySelector(".night");
 const draw = document.querySelector(".draw");
-
 const hide = document.querySelector(".hide");
-
 const canvas = document.getElementById("canvas");
 const increaseBtn = document.getElementById("increase");
 const decreaseBtn = document.getElementById("decrease");
@@ -28,8 +26,6 @@ function addNewNote(text = "") {
 
   myNote.innerHTML = `
     <div class="tools">
-    <button id="voise"><i class="fas fa-microphone"></i></button>
-    <p id="instructions"></p>
     <button class="color"><i class="fas fa-palette"></i></button>
         <button class="edit"><i class="fas fa-edit"></i></button>
         <button class="delete"><i class="fas fa-trash-alt"></i></button>
@@ -46,10 +42,10 @@ function addNewNote(text = "") {
   const colorful = myNote.querySelector(".color");
 
   colorful.addEventListener("click", () => {
-    const newColor = makeRandom();
+    makeRandom();
 
     const textColor = myNote.querySelector("textarea");
-    textColor.style.color = newColor;
+    textColor.style.color = makeRandom();
   });
 
   textArea.value = text;
@@ -74,56 +70,7 @@ function addNewNote(text = "") {
     update();
   });
   document.body.appendChild(myNote);
-
-  //Speech to text using Jquery
-
-  let speechRecognition = window.webkitSpeechRecognition;
-
-  let recognition = new speechRecognition();
-
-  let textarea = $("textarea");
-
-  let instructions = $("#instructions");
-
-  let content = "";
-
-  recognition.continuous = true;
-
-  recognition.onstart = function () {
-    instructions.text("Voice Recognition is On");
-  };
-
-  recognition.onspeechend = function () {
-    instructions.text("No Activity");
-  };
-
-  recognition.onerror = function () {
-    instruction.text("Try Again");
-  };
-
-  recognition.onresult = function (event) {
-    let current = event.resultIndex;
-
-    let transcript = event.results[current][0].transcript;
-
-    content += transcript;
-
-    textarea.val(content);
-  };
-
-  $("#voise").click(function (e) {
-    recognition.start();
-  });
-
-  textarea.on("input", function () {
-    content = $(this).val();
-  });
 }
-
-//Night Mode
-night.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-});
 
 //Note Update
 function update() {
@@ -136,6 +83,11 @@ function update() {
   localStorage.setItem("notes", JSON.stringify(notes));
 }
 
+//Night Mode
+night.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+
 //Random-Color Function
 const makeRandom = () => {
   const r = Math.floor(Math.random() * 256);
@@ -145,7 +97,6 @@ const makeRandom = () => {
   return `rgb(${r},${g},${b})`;
 };
 
-
 //Draw appear
 draw.addEventListener("click", () => {
   hide.classList.toggle("draw-hide");
@@ -153,7 +104,6 @@ draw.addEventListener("click", () => {
 
 //Draw app start here
 const ctx = canvas.getContext("2d");
-
 let size = 5;
 let isPressed = false;
 colorEl.value = "black";
