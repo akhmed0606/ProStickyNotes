@@ -207,3 +207,10 @@ div.note {
   display: block;
 }
 
+@media screen and(max-width:480px) {
+    .draw {
+         display: none;
+    }
+  
+}
+
