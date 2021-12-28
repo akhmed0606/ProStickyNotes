@@ -1,4 +1,4 @@
-# Pro Sticky Notes
+# Sticky Notes
 
 <a href="https://akhmed0606.github.io/ProStickyNotes/" class="button">Live Demo</a>
 
