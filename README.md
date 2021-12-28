@@ -25,6 +25,7 @@ You can check the syntax of markdown library if you wish to modify your text wit
 - `JavaScript`
 
 <br>
+
 ## ⚙ Technologies
 
 This project was developed using the following technologies:
