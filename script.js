@@ -95,7 +95,7 @@ const makeRandom = () => {
   const b = Math.floor(Math.random() * 256);
   sum = r + g + b;
   return `rgb(${r},${g},${b})`;
-};
+}
 
 //Draw appear
 draw.addEventListener("click", () => {
